@@ -73,7 +73,7 @@
 		A1111111111111111111113A /* AnalyticsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsStore.swift; sourceTree = "<group>"; };
 		B11111111111111111111112 /* SupabaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAuthProvider.swift; sourceTree = "<group>"; };
 		B11111111111111111111114 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
-		1A2B3C4D5E6F789B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A2B3C4D5E6F78B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C11111111111111111111112 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
 		C11111111111111111111114 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		C11111111111111111111116 /* ChartViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViews.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				1A2B3C4D5E6F7894 /* Main.storyboard */,
 				1A2B3C4D5E6F7896 /* Assets.xcassets */,
 				1A2B3C4D5E6F7899 /* LaunchScreen.storyboard */,
-				1A2B3C4D5E6F789B /* Info.plist */,
+				1A2B3C4D5E6F78B0 /* Info.plist */,
 				A11111111111111111111112 /* VideoPlayerViewController.swift */,
 				A11111111111111111111114 /* AVPlayerView.swift */,
 				A11111111111111111111116 /* VideoControlsView.swift */,
