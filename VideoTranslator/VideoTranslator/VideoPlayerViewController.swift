@@ -231,7 +231,8 @@ class VideoPlayerViewController: UIViewController {
     }
     
     @objc private func translateButtonTapped() {
-        guard let subtitles = subtitleManager.currentSubtitles, !subtitles.isEmpty else {
+        let subtitles = subtitleManager.currentSubtitles
+        guard !subtitles.isEmpty else {
             showAlert(title: "No Subtitles", message: "Please wait for transcription to complete or import a video first.")
             return
         }
