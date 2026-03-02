@@ -374,7 +374,7 @@
 			};
 			name = Release;
 		};
-		1A2B3C4D5E6F789C /* Debug */ = {
+		1A2B3C4D5E6F789E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -449,7 +449,7 @@
 		1A2B3C4D5E6F789C /* Build configuration list for PBXNativeTarget "VideoTranslator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A2B3C4D5E6F789C /* Debug */,
+				1A2B3C4D5E6F789E /* Debug */,
 				1A2B3C4D5E6F789D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
