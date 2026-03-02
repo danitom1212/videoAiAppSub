@@ -102,7 +102,7 @@ class AdminRoleManager {
         roleCache[userId] = role
         
         // If granting to current user, update current role
-        if userId == AppContainer.shared.auth.currentUser?.id?.uuidString {
+        if userId == AppContainer.shared.auth.currentUser?.id.uuidString {
             currentUserRole = role
         }
     }
@@ -118,7 +118,7 @@ class AdminRoleManager {
         roleCache.removeValue(forKey: userId)
         
         // If revoking from current user, update current role
-        if userId == AppContainer.shared.auth.currentUser?.id?.uuidString {
+        if userId == AppContainer.shared.auth.currentUser?.id.uuidString {
             currentUserRole = nil
         }
     }

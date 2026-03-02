@@ -16,8 +16,9 @@ struct AnalyticsEvent: Codable {
     let sourceLanguage: String?
     let targetLanguage: String?
     let provider: String?
+    let language: String?
 
-    init(id: UUID = UUID(), type: AnalyticsEventType, userEmail: String?, timestamp: Date = Date(), sourceLanguage: String? = nil, targetLanguage: String? = nil, provider: String? = nil) {
+    init(id: UUID = UUID(), type: AnalyticsEventType, userEmail: String?, timestamp: Date = Date(), sourceLanguage: String? = nil, targetLanguage: String? = nil, provider: String? = nil, language: String? = nil) {
         self.id = id
         self.type = type
         self.userEmail = userEmail
@@ -25,5 +26,6 @@ struct AnalyticsEvent: Codable {
         self.sourceLanguage = sourceLanguage
         self.targetLanguage = targetLanguage
         self.provider = provider
+        self.language = language
     }
 }

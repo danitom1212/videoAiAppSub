@@ -8,7 +8,7 @@ protocol TranscriptionServiceDelegate: AnyObject {
     func transcriptionDidFail(with error: Error)
 }
 
-class TranscriptionService {
+class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
     
     // MARK: - Properties
     weak var delegate: TranscriptionServiceDelegate?
@@ -170,27 +170,7 @@ class TranscriptionService {
         let recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         recognitionRequest.shouldReportPartialResults = true
         
-        let recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
-            var chunkSubtitles: [Subtitle] = []
-            
-            if let result = result {
-                let segments = result.bestTranscription.segments
-                
-                for segment in segments {
-                    let subtitle = Subtitle(
-                        startTime: startTime + segment.timestamp.startSeconds,
-                        endTime: startTime + segment.timestamp.endSeconds,
-                        originalText: segment.substring,
-                        confidence: segment.confidence
-                    )
-                    chunkSubtitles.append(subtitle)
-                }
-            }
-            
-            if error != nil || result?.isFinal == true {
-                completion(chunkSubtitles)
-            }
-        }
+        let recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, delegate: self)
         
         // Add audio samples to the recognition request
         for sampleBuffer in samples {
@@ -200,6 +180,31 @@ class TranscriptionService {
         }
         
         recognitionRequest.endAudio()
+    }
+    
+    // MARK: - SFSpeechRecognizerDelegate
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
+        if !available {
+            delegate?.transcriptionDidFail(with: TranscriptionError.notAvailable)
+        }
+    }
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, didFinalizeResult result: SFSpeechRecognitionResult) {
+        // Handle final result
+        let subtitles = result.bestTranscription.segments.map { segment in
+            Subtitle(
+                startTime: segment.timestamp.startSeconds,
+                endTime: segment.timestamp.endSeconds,
+                originalText: segment.substring,
+                confidence: segment.confidence
+            )
+        }
+        delegate?.transcriptionDidComplete(with: subtitles)
+    }
+    
+    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, didFinishRecognition recognitionResult: SFSpeechRecognitionResult) {
+        // Handle completion
     }
 }
 
@@ -211,6 +216,7 @@ enum TranscriptionError: LocalizedError {
     case audioReaderFailed
     case noAudioTrack
     case cancelled
+    case notAvailable
     case unknown
     
     var errorDescription: String? {
@@ -226,7 +232,9 @@ enum TranscriptionError: LocalizedError {
         case .noAudioTrack:
             return "No audio track found in the video."
         case .cancelled:
-            return "Transcription was cancelled."
+            return "Speech recognition was cancelled."
+        case .notAvailable:
+            return "Speech recognition is not available."
         case .unknown:
             return "An unknown error occurred during transcription."
         }

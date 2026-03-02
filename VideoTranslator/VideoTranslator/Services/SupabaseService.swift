@@ -75,6 +75,21 @@ class SupabaseService {
             translationsCount: 0
         )
     }
+    
+    func saveTranslationEvent(_ event: TranslationEvent) async throws {
+        // Mock implementation
+        print("Saving translation event for user \(event.userId)")
+    }
+    
+    func getGlobalAnalytics(fromDate: Date) async throws -> GlobalAnalytics {
+        // Mock implementation
+        return GlobalAnalytics(
+            totalTranslations: 0,
+            totalSessions: 0,
+            uniqueUsers: 0,
+            topLanguages: []
+        )
+    }
 }
 
 // MARK: - Analytics Models
