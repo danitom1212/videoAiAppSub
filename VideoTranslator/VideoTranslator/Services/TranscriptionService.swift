@@ -194,8 +194,8 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         // Handle final result
         let subtitles = result.bestTranscription.segments.map { segment in
             Subtitle(
-                startTime: segment.timestamp.startSeconds,
-                endTime: segment.timestamp.endSeconds,
+                startTime: segment.timestamp,
+                endTime: segment.timestamp + 2.0, // Estimate 2 seconds per segment
                 originalText: segment.substring,
                 confidence: segment.confidence
             )
@@ -221,8 +221,8 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         // Handle final speech result
         let subtitles = finalResult.bestTranscription.segments.map { segment in
             Subtitle(
-                startTime: segment.timestamp.startSeconds,
-                endTime: segment.timestamp.endSeconds,
+                startTime: segment.timestamp,
+                endTime: segment.timestamp + 2.0, // Estimate 2 seconds per segment
                 originalText: segment.substring,
                 confidence: segment.confidence
             )
