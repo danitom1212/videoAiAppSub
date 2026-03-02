@@ -229,7 +229,6 @@
 				A11111111111111111111119 /* LanguageSelectionViewController.swift in Sources */,
 				A1111111111111111111111B /* SettingsViewController.swift in Sources */,
 				A1111111111111111111111D /* SessionGateViewController.swift in Sources */,
-				A1111111111111111111111F /* AdminDashboardViewController.swift in Sources */,
 				A11111111111111111111121 /* LoginViewController.swift in Sources */,
 				A11111111111111111111123 /* SignupViewController.swift in Sources */,
 				A11111111111111111111125 /* Subtitle.swift in Sources */,
