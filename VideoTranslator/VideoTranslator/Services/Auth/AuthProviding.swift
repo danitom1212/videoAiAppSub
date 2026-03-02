@@ -20,6 +20,12 @@ enum AuthError: LocalizedError {
     case invalidCredentials
     case cancelled
     case unknown
+    case notImplemented
+    case notAuthenticated
+    case signInFailed
+    case signUpFailed
+    case signOutFailed
+    case accountDeletionFailed
 
     var errorDescription: String? {
         switch self {
@@ -35,6 +41,18 @@ enum AuthError: LocalizedError {
             return "Operation cancelled."
         case .unknown:
             return "Unknown authentication error."
+        case .notImplemented:
+            return "This feature is not implemented yet."
+        case .notAuthenticated:
+            return "User is not authenticated."
+        case .signInFailed:
+            return "Failed to sign in. Please check your credentials."
+        case .signUpFailed:
+            return "Failed to create account. Please try again."
+        case .signOutFailed:
+            return "Failed to sign out. Please try again."
+        case .accountDeletionFailed:
+            return "Failed to delete account. Please try again."
         }
     }
 }

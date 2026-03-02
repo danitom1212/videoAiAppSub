@@ -64,15 +64,17 @@ class AdminRoleManager {
             return nil
         }
         
+        let userIdString = userId.uuidString
+        
         // Check cache first
-        if let cachedRole = roleCache[userId] {
+        if let cachedRole = roleCache[userIdString] {
             currentUserRole = cachedRole
             return cachedRole
         }
         
         // Fetch from database
-        let role = try await fetchUserRole(userId: userId)
-        roleCache[userId] = role
+        let role = try await fetchUserRole(userId: userIdString)
+        roleCache[userIdString] = role
         currentUserRole = role
         
         return role
@@ -100,7 +102,7 @@ class AdminRoleManager {
         roleCache[userId] = role
         
         // If granting to current user, update current role
-        if userId == AppContainer.shared.auth.currentUser?.id {
+        if userId == AppContainer.shared.auth.currentUser?.id?.uuidString {
             currentUserRole = role
         }
     }
@@ -116,7 +118,7 @@ class AdminRoleManager {
         roleCache.removeValue(forKey: userId)
         
         // If revoking from current user, update current role
-        if userId == AppContainer.shared.auth.currentUser?.id {
+        if userId == AppContainer.shared.auth.currentUser?.id?.uuidString {
             currentUserRole = nil
         }
     }

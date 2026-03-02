@@ -110,8 +110,8 @@ final class UserDetailViewController: UIViewController {
     private func loadUserData() {
         Task {
             do {
-                async let statsTask = database.getSessionStats(for: user.id)
-                async let historyTask = database.getTranslationHistory(for: user.id, limit: 20)
+                async let statsTask = database.getSessionStats(for: user.id.uuidString)
+                async let historyTask = database.getTranslationHistory(for: user.id.uuidString, limit: 20)
                 
                 let (stats, history) = try await (statsTask, historyTask)
                 

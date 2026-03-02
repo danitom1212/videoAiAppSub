@@ -66,12 +66,9 @@ class SupabaseAuthProvider: AuthProviding {
     func signIn(email: String, password: String) async throws -> AppUser {
         // Mock implementation - replace with actual Supabase logic when available
         let appUser = AppUser(
-            id: UUID().uuidString,
+            id: UUID(),
             email: email,
-            displayName: email.components(separatedBy: "@").first ?? "",
-            isAnonymous: false,
-            createdAt: Date(),
-            lastLoginAt: Date()
+            displayName: email.components(separatedBy: "@").first ?? ""
         )
         
         self.currentUser = appUser
@@ -80,6 +77,18 @@ class SupabaseAuthProvider: AuthProviding {
     
     func signInWithGoogle() async throws -> AppUser {
         throw AuthError.notImplemented
+    }
+    
+    func signUp(email: String, password: String, displayName: String) async throws -> AppUser {
+        // Mock implementation - replace with actual Supabase logic when available
+        let appUser = AppUser(
+            id: UUID(),
+            email: email,
+            displayName: displayName
+        )
+        
+        self.currentUser = appUser
+        return appUser
     }
     
     func signOut() async throws {

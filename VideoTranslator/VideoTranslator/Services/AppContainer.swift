@@ -18,7 +18,7 @@ final class AppContainer {
         #endif
         
         self.analytics = AnalyticsStore()
-        self.database = SupabaseService()
+        self.database = SupabaseService.shared
 
         auth.restoreSession()
     }

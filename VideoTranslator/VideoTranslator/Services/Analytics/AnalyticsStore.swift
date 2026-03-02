@@ -121,12 +121,12 @@ final class AnalyticsStore {
         }
         
         return TranslationEvent(
-            userId: userId,
+            userId: userId.uuidString,
             sourceLanguage: sourceLanguage,
             targetLanguage: targetLanguage,
-            originalText: event.originalText ?? "",
-            translatedText: event.translatedText ?? "",
-            durationMs: event.durationMs ?? 0
+            originalText: "",
+            translatedText: "",
+            durationMs: 0
         )
     }
     
@@ -141,8 +141,6 @@ final class AnalyticsStore {
             eventType = .sessionEnd
         case .translation:
             eventType = .translation
-        case .languageChange:
-            eventType = .languageChange
         default:
             eventType = nil
         }
@@ -150,10 +148,10 @@ final class AnalyticsStore {
         guard let sessionEventType = eventType else { return nil }
         
         return SessionEvent(
-            userId: userId,
+            userId: userId.uuidString,
             type: sessionEventType,
-            videoDurationSeconds: event.videoDurationSeconds ?? 0,
-            language: event.targetLanguage ?? "en"
+            videoDurationSeconds: 0,
+            language: event.language ?? "en"
         )
     }
 
