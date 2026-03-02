@@ -78,7 +78,12 @@ class SupabaseService {
     
     func saveTranslationEvent(_ event: TranslationEvent) async throws {
         // Mock implementation
-        print("Saving translation event for user \(event.userId)")
+        print("Saving translation event: \(event)")
+    }
+    
+    func saveSessionEvent(_ event: SessionEvent) async throws {
+        // Mock implementation
+        print("Saving session event: \(event)")
     }
     
     func getGlobalAnalytics(fromDate: Date) async throws -> GlobalAnalytics {

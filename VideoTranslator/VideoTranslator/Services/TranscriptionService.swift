@@ -170,10 +170,10 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         let recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         recognitionRequest.shouldReportPartialResults = true
         
-        let recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest, delegate: self)
+        let _ = speechRecognizer.recognitionTask(with: recognitionRequest, delegate: self)
         
         // Add audio samples to the recognition request
-        for sampleBuffer in samples {
+        for _ in samples {
             // Convert CMSampleBuffer to AVAudioPCMBuffer if needed
             // For now, we'll skip this conversion as it requires additional audio processing
             print("Processing audio sample")
@@ -194,8 +194,8 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         // Handle final result
         let subtitles = result.bestTranscription.segments.map { segment in
             Subtitle(
-                startTime: segment.timeRange.start.seconds,
-                endTime: segment.timeRange.end.seconds,
+                startTime: segment.timestamp.startSeconds,
+                endTime: segment.timestamp.endSeconds,
                 originalText: segment.substring,
                 confidence: segment.confidence
             )
@@ -203,7 +203,7 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         delegate?.transcriptionDidComplete(with: subtitles)
     }
     
-    func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, didFinishRecognition recognitionResult: SFSpeechRecognitionResult) {
+    private func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, didFinishRecognition recognitionResult: SFSpeechRecognitionResult) {
         // Handle completion
     }
     
@@ -221,8 +221,8 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecogn
         // Handle final speech result
         let subtitles = finalResult.bestTranscription.segments.map { segment in
             Subtitle(
-                startTime: segment.timeRange.start.seconds,
-                endTime: segment.timeRange.end.seconds,
+                startTime: segment.timestamp.startSeconds,
+                endTime: segment.timestamp.endSeconds,
                 originalText: segment.substring,
                 confidence: segment.confidence
             )

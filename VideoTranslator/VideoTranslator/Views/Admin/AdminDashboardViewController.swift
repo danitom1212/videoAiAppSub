@@ -156,7 +156,7 @@ final class AdminDashboardViewController: UIViewController {
         Task {
             do {
                 // Load global analytics
-                let fromDate = Calendar.current.date(byAdding: .day, value: -7, to: Date())
+                let fromDate = Calendar.current.date(byAdding: .day, value: -7, to: Date()) ?? Date()
                 async let globalAnalyticsTask = database.getGlobalAnalytics(fromDate: fromDate)
                 async let usersTask = database.getAllUsers(limit: 50)
                 
