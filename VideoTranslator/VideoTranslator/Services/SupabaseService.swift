@@ -3,17 +3,11 @@ import Foundation
 class SupabaseService {
     static let shared = SupabaseService()
     
-    private let client: SupabaseClient
+    // private let client: SupabaseClient // Removed - no Supabase dependency
     
     private init() {
         // TODO: Replace with your actual Supabase URL and Anon Key
-        let supabaseURL = URL(string: "https://YOUR_PROJECT.supabase.co")!
-        let supabaseKey = "YOUR_ANON_KEY"
-        
-        self.client = SupabaseClient(
-            supabaseURL: supabaseURL,
-            supabaseKey: supabaseKey
-        )
+        // self.client = SupabaseClient(...) // Removed - no Supabase dependency
     }
     
     // MARK: - User Operations
