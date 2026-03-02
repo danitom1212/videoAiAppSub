@@ -74,6 +74,10 @@
 		B11111111111111111111112 /* SupabaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseAuthProvider.swift; sourceTree = "<group>"; };
 		B11111111111111111111114 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F789B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C11111111111111111111112 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
+		C11111111111111111111114 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		C11111111111111111111116 /* ChartViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViews.swift; sourceTree = "<group>"; };
+		C11111111111111111111118 /* AdminRoleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRoleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,10 @@
 				A1111111111111111111113A /* AnalyticsStore.swift */,
 				B11111111111111111111112 /* SupabaseAuthProvider.swift */,
 				B11111111111111111111114 /* SupabaseService.swift */,
+				C11111111111111111111112 /* AdminDashboardViewController.swift */,
+				C11111111111111111111114 /* UserDetailViewController.swift */,
+				C11111111111111111111116 /* ChartViews.swift */,
+				C11111111111111111111118 /* AdminRoleManager.swift */,
 			);
 			path = VideoTranslator;
 			sourceTree = "<group>";
@@ -237,6 +245,10 @@
 				A11111111111111111111139 /* AnalyticsStore.swift in Sources */,
 				B11111111111111111111111 /* SupabaseAuthProvider.swift in Sources */,
 				B11111111111111111111113 /* SupabaseService.swift in Sources */,
+				C11111111111111111111111 /* AdminDashboardViewController.swift in Sources */,
+				C11111111111111111111113 /* UserDetailViewController.swift in Sources */,
+				C11111111111111111111115 /* ChartViews.swift in Sources */,
+				C11111111111111111111117 /* AdminRoleManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
