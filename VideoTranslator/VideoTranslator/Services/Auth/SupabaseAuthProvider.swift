@@ -1,5 +1,4 @@
 import Foundation
-import Supabase
 
 class SupabaseAuthProvider: AuthProviding {
     static let shared = SupabaseAuthProvider()

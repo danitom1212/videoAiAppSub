@@ -1,5 +1,4 @@
 import Foundation
-import Alamofire
 
 protocol TranslationServiceDelegate: AnyObject {
     func translationDidStart()
