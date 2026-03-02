@@ -82,7 +82,7 @@
 		1A2B3C4D5E6F7881 = {
 			isa = PBXGroup;
 			children = (
-				1A2B3C4D5E6F788C /* VideoTranslator */,
+				1A2B3C4D5E6F7890 /* VideoTranslator */,
 				1A2B3C4D5E6F788B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A2B3C4D5E6F788C /* VideoTranslator */ = {
+		1A2B3C4D5E6F7890 /* VideoTranslator */ = {
 			isa = PBXGroup;
 			children = (
 				1A2B3C4D5E6F788D /* AppDelegate.swift */,
