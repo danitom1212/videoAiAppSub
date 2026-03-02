@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 enum AdminRole: String, CaseIterable {
     case admin = "admin"

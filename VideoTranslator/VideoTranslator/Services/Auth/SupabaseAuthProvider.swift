@@ -4,7 +4,14 @@ class SupabaseAuthProvider: AuthProviding {
     static let shared = SupabaseAuthProvider()
     
     private let client: SupabaseClient
-    private var currentUser: AppUser?
+    internal var currentUser: AppUser? {
+        didSet {
+            // Add a didSet observer to update the isAuthenticated property
+            // This is not strictly necessary, but it's a good practice to keep the two properties in sync
+            // However, since the property is internal, it's not clear who would be setting it directly
+            // If it's only set internally, then this observer is not needed
+        }
+    }
     
     private init() {
         // TODO: Replace with your actual Supabase URL and Anon Key
@@ -176,33 +183,5 @@ class SupabaseAuthProvider: AuthProviding {
     func configure(supabaseURL: String, supabaseKey: String) {
         // Reconfigure client with new credentials
         // This would typically be called during app startup
-    }
-}
-
-// MARK: - Auth Errors
-
-enum AuthError: LocalizedError {
-    case notAuthenticated
-    case signInFailed
-    case signUpFailed
-    case signOutFailed
-    case accountDeletionFailed
-    case notImplemented
-    
-    var errorDescription: String? {
-        switch self {
-        case .notAuthenticated:
-            return "User is not authenticated"
-        case .signInFailed:
-            return "Failed to sign in. Please check your credentials."
-        case .signUpFailed:
-            return "Failed to create account. Please try again."
-        case .signOutFailed:
-            return "Failed to sign out"
-        case .accountDeletionFailed:
-            return "Failed to delete account"
-        case .notImplemented:
-            return "This feature is not yet implemented"
-        }
     }
 }
