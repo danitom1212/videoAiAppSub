@@ -8,7 +8,7 @@ protocol TranscriptionServiceDelegate: AnyObject {
     func transcriptionDidFail(with error: Error)
 }
 
-class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
+class TranscriptionService: NSObject, SFSpeechRecognizerDelegate, SFSpeechRecognitionTaskDelegate {
     
     // MARK: - Properties
     weak var delegate: TranscriptionServiceDelegate?
@@ -131,7 +131,7 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
         while reader.status == .reading {
             autoreleasepool {
                 var audioSamples: [CMSampleBuffer] = []
-                var chunkEndTime = currentTime + chunkDuration
+                let chunkEndTime = currentTime + chunkDuration
                 
                 // Collect samples for this chunk
                 while reader.status == .reading && currentTime < chunkEndTime {
@@ -194,8 +194,8 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
         // Handle final result
         let subtitles = result.bestTranscription.segments.map { segment in
             Subtitle(
-                startTime: segment.timestamp.startSeconds,
-                endTime: segment.timestamp.endSeconds,
+                startTime: segment.timeRange.start.seconds,
+                endTime: segment.timeRange.end.seconds,
                 originalText: segment.substring,
                 confidence: segment.confidence
             )
@@ -205,6 +205,33 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, didFinishRecognition recognitionResult: SFSpeechRecognitionResult) {
         // Handle completion
+    }
+    
+    // MARK: - SFSpeechRecognitionTaskDelegate
+    
+    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didFinishSuccessfully successfully: Bool) {
+        if successfully {
+            // Task completed successfully
+        } else {
+            delegate?.transcriptionDidFail(with: TranscriptionError.unknown)
+        }
+    }
+    
+    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didDetectSpeechFinalResult finalResult: SFSpeechRecognitionResult) {
+        // Handle final speech result
+        let subtitles = finalResult.bestTranscription.segments.map { segment in
+            Subtitle(
+                startTime: segment.timeRange.start.seconds,
+                endTime: segment.timeRange.end.seconds,
+                originalText: segment.substring,
+                confidence: segment.confidence
+            )
+        }
+        delegate?.transcriptionDidComplete(with: subtitles)
+    }
+    
+    func speechRecognitionTask(_ task: SFSpeechRecognitionTask, didHypothesizeTranscription hypothesis: SFTranscription) {
+        // Handle intermediate results if needed
     }
 }
 
