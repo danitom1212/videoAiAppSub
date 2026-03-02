@@ -1,4 +1,5 @@
 import Foundation
+import Alamofire
 
 protocol TranslationServiceDelegate: AnyObject {
     func translationDidStart()
@@ -13,6 +14,7 @@ class TranslationService {
     private var sourceLanguage: Language = Language.language(for: "en")!
     private var targetLanguage: Language = Language.language(for: "es")!
     private var apiKey: String
+    private let baseURL = "https://api.openai.com/v1/chat/completions"
     
     // MARK: - Initialization
     init() {
@@ -30,6 +32,11 @@ class TranslationService {
     }
     
     func translateSubtitles(_ subtitles: [Subtitle]) {
+        guard !apiKey.isEmpty else {
+            delegate?.translationDidFail(with: TranslationError.apiKeyMissing)
+            return
+        }
+        
         delegate?.translationDidStart()
         
         // Process subtitles in batches to avoid API rate limits

@@ -176,6 +176,10 @@ class SettingsViewController: UIViewController {
 // MARK: - UITableViewDataSource
 extension SettingsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
+        // Check if user has admin permissions
+        if hasAdminAccess() {
+            return 4 // Add Admin section
+        }
         return 3
     }
     
@@ -183,7 +187,13 @@ extension SettingsViewController: UITableViewDataSource {
         switch section {
         case 0: return 1 // API Key
         case 1: return 2 // Subtitle Style, Auto-translate
-        case 2: return 1 // About
+        case 2: 
+            if hasAdminAccess() {
+                return 2 // Admin Dashboard, About
+            } else {
+                return 1 // About
+            }
+        case 3: return 1 // About (only when admin section exists)
         default: return 0
         }
     }
@@ -206,6 +216,30 @@ extension SettingsViewController: UITableViewDataSource {
                 return cell
             }
         case 2:
+            if hasAdminAccess() {
+                if indexPath.row == 0 {
+                    // Admin Dashboard
+                    let cell = UITableViewCell(style: .default, reuseIdentifier: "AdminCell")
+                    cell.textLabel?.text = "Admin Dashboard"
+                    cell.accessoryType = .disclosureIndicator
+                    cell.backgroundColor = .systemBlue.withAlphaComponent(0.1)
+                    return cell
+                } else {
+                    // About
+                    let cell = UITableViewCell(style: .default, reuseIdentifier: "AboutCell")
+                    cell.textLabel?.text = "About"
+                    cell.accessoryType = .disclosureIndicator
+                    return cell
+                }
+            } else {
+                // About
+                let cell = UITableViewCell(style: .default, reuseIdentifier: "AboutCell")
+                cell.textLabel?.text = "About"
+                cell.accessoryType = .disclosureIndicator
+                return cell
+            }
+        case 3:
+            // About (only when admin section exists)
             let cell = UITableViewCell(style: .default, reuseIdentifier: "AboutCell")
             cell.textLabel?.text = "About"
             cell.accessoryType = .disclosureIndicator
@@ -219,7 +253,13 @@ extension SettingsViewController: UITableViewDataSource {
         switch section {
         case 0: return "Translation Service"
         case 1: return "Display"
-        case 2: return "Information"
+        case 2: 
+            if hasAdminAccess() {
+                return "Administration"
+            } else {
+                return "Information"
+            }
+        case 3: return "Information"
         default: return nil
         }
     }
@@ -233,9 +273,42 @@ extension SettingsViewController: UITableViewDelegate {
         if indexPath.section == 1 && indexPath.row == 0 {
             // Show subtitle style selection
             showSubtitleStyleSelection()
-        } else if indexPath.section == 2 && indexPath.row == 0 {
-            // Show about screen
+        } else if indexPath.section == 2 {
+            if hasAdminAccess() {
+                if indexPath.row == 0 {
+                    // Admin Dashboard
+                    showAdminDashboard()
+                } else {
+                    // Show about screen
+                    showAboutScreen()
+                }
+            } else {
+                // Show about screen
+                showAboutScreen()
+            }
+        } else if indexPath.section == 3 && indexPath.row == 0 {
+            // Show about screen (only when admin section exists)
             showAboutScreen()
+        }
+    }
+    
+    private func hasAdminAccess() -> Bool {
+        // For now, return true for development
+        // In production, this would check AdminRoleManager.shared.canAccessAdminDashboard()
+        return true
+    }
+    
+    private func showAdminDashboard() {
+        requireAdminRole { [weak self] hasAccess in
+            guard let self = self else { return }
+            
+            if hasAccess {
+                let adminVC = AdminDashboardViewController()
+                let navController = UINavigationController(rootViewController: adminVC)
+                self.present(navController, animated: true)
+            } else {
+                self.showAdminAccessDenied()
+            }
         }
     }
     
