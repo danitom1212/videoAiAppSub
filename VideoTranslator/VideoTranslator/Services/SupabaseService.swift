@@ -126,6 +126,14 @@ enum SessionEventType: String {
     case languageChange = "language_change"
 }
 
+struct UserAnalytics {
+    let totalSessions: Int
+    let totalWatchTimeSeconds: Double
+    let averageSessionDuration: Double
+    let languagesUsed: Set<String>
+    let translationsCount: Int
+}
+
 struct SessionStats {
     let totalSessions: Int
     let totalWatchTimeSeconds: Double
