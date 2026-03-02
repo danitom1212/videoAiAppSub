@@ -18,7 +18,7 @@ class TranscriptionService: NSObject, SFSpeechRecognizerDelegate {
     private let audioEngine = AVAudioEngine()
     
     // MARK: - Initialization
-    init() {
+    override init() {
         // Default to US English recognizer
         self.speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
     }
