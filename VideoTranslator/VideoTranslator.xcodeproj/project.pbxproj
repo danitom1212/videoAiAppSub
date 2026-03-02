@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A2B3C4D5E6F7890 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7891 /* AppDelegate.swift */; };
-		1A2B3C4D5E6F7892 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7893 /* SceneDelegate.swift */; };
-		1A2B3C4D5E6F7894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7895 /* ViewController.swift */; };
+		1A2B3C4D5E6F788C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F788D /* AppDelegate.swift */; };
+		1A2B3C4D5E6F788E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F788F /* SceneDelegate.swift */; };
+		1A2B3C4D5E6F7890 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7891 /* ViewController.swift */; };
+		1A2B3C4D5E6F7893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7894 /* Main.storyboard */; };
+		1A2B3C4D5E6F7895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7896 /* Assets.xcassets */; };
+		1A2B3C4D5E6F7898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7899 /* LaunchScreen.storyboard */; };
 		A11111111111111111111111 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11111111111111111111112 /* VideoPlayerViewController.swift */; };
 		A11111111111111111111113 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11111111111111111111114 /* AVPlayerView.swift */; };
 		A11111111111111111111115 /* VideoControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11111111111111111111116 /* VideoControlsView.swift */; };
@@ -31,16 +34,16 @@
 		A11111111111111111111135 /* MockAuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11111111111111111111136 /* MockAuthProvider.swift */; };
 		A11111111111111111111137 /* AnalyticsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11111111111111111111138 /* AnalyticsModels.swift */; };
 		A11111111111111111111139 /* AnalyticsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1111111111111111111113A /* AnalyticsStore.swift */; };
-		1A2B3C4D5E6F7896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7897 /* Main.storyboard */; };
-		1A2B3C4D5E6F7898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7899 /* Assets.xcassets */; };
-		1A2B3C4D5E6F789A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F789B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A2B3C4D5E6F788E /* VideoTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A2B3C4D5E6F7891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A2B3C4D5E6F7893 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1A2B3C4D5E6F7895 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F788A /* VideoTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A2B3C4D5E6F788D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F788F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7891 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7894 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7896 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7899 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A11111111111111111111112 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		A11111111111111111111114 /* AVPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
 		A11111111111111111111116 /* VideoControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoControlsView.swift; sourceTree = "<group>"; };
@@ -62,14 +65,11 @@
 		A11111111111111111111136 /* MockAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthProvider.swift; sourceTree = "<group>"; };
 		A11111111111111111111138 /* AnalyticsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsModels.swift; sourceTree = "<group>"; };
 		A1111111111111111111113A /* AnalyticsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsStore.swift; sourceTree = "<group>"; };
-		1A2B3C4D5E6F7897 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1A2B3C4D5E6F7899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A2B3C4D5E6F789B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1A2B3C4D5E6F789D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A2B3C4D5E6F789B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A2B3C4D5E6F788B /* Frameworks */ = {
+		1A2B3C4D5E6F7887 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,35 +79,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A2B3C4D5E6F7885 = {
+		1A2B3C4D5E6F7881 = {
 			isa = PBXGroup;
 			children = (
-				1A2B3C4D5E6F7890 /* VideoTranslator */,
-				1A2B3C4D5E6F788F /* Products */,
+				1A2B3C4D5E6F788C /* VideoTranslator */,
+				1A2B3C4D5E6F788B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1A2B3C4D5E6F788F /* Products */ = {
+		1A2B3C4D5E6F788B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A2B3C4D5E6F788E /* VideoTranslator.app */,
+				1A2B3C4D5E6F788A /* VideoTranslator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A2B3C4D5E6F7890 /* VideoTranslator */ = {
+		1A2B3C4D5E6F788C /* VideoTranslator */ = {
 			isa = PBXGroup;
 			children = (
-				1A2B3C4D5E6F7891 /* AppDelegate.swift */,
-				1A2B3C4D5E6F7893 /* SceneDelegate.swift */,
-				A1111111111111111111111E /* SessionGateViewController.swift */,
-				1A2B3C4D5E6F7895 /* ViewController.swift */,
+				1A2B3C4D5E6F788D /* AppDelegate.swift */,
+				1A2B3C4D5E6F788F /* SceneDelegate.swift */,
+				1A2B3C4D5E6F7891 /* ViewController.swift */,
+				1A2B3C4D5E6F7894 /* Main.storyboard */,
+				1A2B3C4D5E6F7896 /* Assets.xcassets */,
+				1A2B3C4D5E6F7899 /* LaunchScreen.storyboard */,
+				1A2B3C4D5E6F789B /* Info.plist */,
 				A11111111111111111111112 /* VideoPlayerViewController.swift */,
 				A11111111111111111111114 /* AVPlayerView.swift */,
 				A11111111111111111111116 /* VideoControlsView.swift */,
 				A11111111111111111111118 /* SubtitleOverlayView.swift */,
 				A1111111111111111111111A /* LanguageSelectionViewController.swift */,
 				A1111111111111111111111C /* SettingsViewController.swift */,
+				A1111111111111111111111E /* SessionGateViewController.swift */,
 				A11111111111111111111120 /* AdminDashboardViewController.swift */,
 				A11111111111111111111122 /* LoginViewController.swift */,
 				A11111111111111111111124 /* SignupViewController.swift */,
@@ -122,10 +126,6 @@
 				A11111111111111111111136 /* MockAuthProvider.swift */,
 				A11111111111111111111138 /* AnalyticsModels.swift */,
 				A1111111111111111111113A /* AnalyticsStore.swift */,
-				1A2B3C4D5E6F7897 /* Main.storyboard */,
-				1A2B3C4D5E6F7899 /* Assets.xcassets */,
-				1A2B3C4D5E6F789B /* LaunchScreen.storyboard */,
-				1A2B3C4D5E6F789D /* Info.plist */,
 			);
 			path = VideoTranslator;
 			sourceTree = "<group>";
@@ -133,13 +133,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A2B3C4D5E6F788D /* VideoTranslator */ = {
+		1A2B3C4D5E6F7889 /* VideoTranslator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A2B3C4D5E6F78A0 /* Build configuration list for PBXNativeTarget "VideoTranslator" */;
+			buildConfigurationList = 1A2B3C4D5E6F789C /* Build configuration list for PBXNativeTarget "VideoTranslator" */;
 			buildPhases = (
-				1A2B3C4D5E6F788A /* Sources */,
-				1A2B3C4D5E6F788B /* Frameworks */,
-				1A2B3C4D5E6F788C /* Resources */,
+				1A2B3C4D5E6F7886 /* Sources */,
+				1A2B3C4D5E6F7887 /* Frameworks */,
+				1A2B3C4D5E6F7888 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -147,25 +147,25 @@
 			);
 			name = VideoTranslator;
 			productName = VideoTranslator;
-			productReference = 1A2B3C4D5E6F788E /* VideoTranslator.app */;
+			productReference = 1A2B3C4D5E6F788A /* VideoTranslator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1A2B3C4D5E6F7886 /* Project object */ = {
+		1A2B3C4D5E6F7882 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					1A2B3C4D5E6F788D = {
+					1A2B3C4D5E6F7889 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = 1A2B3C4D5E6F7889 /* Build configuration list for PBXProject "VideoTranslator" */;
+			buildConfigurationList = 1A2B3C4D5E6F7885 /* Build configuration list for PBXProject "VideoTranslator" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -173,84 +173,65 @@
 				en,
 				Base,
 			);
-			mainGroup = 1A2B3C4D5E6F7885;
-			productRefGroup = 1A2B3C4D5E6F788F /* Products */;
+			mainGroup = 1A2B3C4D5E6F7881;
+			productRefGroup = 1A2B3C4D5E6F788B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A2B3C4D5E6F788D /* VideoTranslator */,
+				1A2B3C4D5E6F7889 /* VideoTranslator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A2B3C4D5E6F788C /* Resources */ = {
+		1A2B3C4D5E6F7888 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2B3C4D5E6F789A /* LaunchScreen.storyboard in Resources */,
-				1A2B3C4D5E6F7898 /* Assets.xcassets in Resources */,
-				1A2B3C4D5E6F7896 /* Main.storyboard in Resources */,
+				1A2B3C4D5E6F7898 /* LaunchScreen.storyboard in Resources */,
+				1A2B3C4D5E6F7895 /* Assets.xcassets in Resources */,
+				1A2B3C4D5E6F7893 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A2B3C4D5E6F788A /* Sources */ = {
+		1A2B3C4D5E6F7886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A11111111111111111111131 /* AppContainer.swift in Sources */,
-				A11111111111111111111133 /* AuthProviding.swift in Sources */,
-				A11111111111111111111135 /* MockAuthProvider.swift in Sources */,
-				A11111111111111111111137 /* AnalyticsModels.swift in Sources */,
-				A11111111111111111111139 /* AnalyticsStore.swift in Sources */,
-				A11111111111111111111129 /* AppUser.swift in Sources */,
-				A11111111111111111111125 /* Subtitle.swift in Sources */,
-				A11111111111111111111127 /* Language.swift in Sources */,
-				A1111111111111111111112B /* TranscriptionService.swift in Sources */,
-				A1111111111111111111112D /* TranslationService.swift in Sources */,
-				A1111111111111111111112F /* SubtitleManager.swift in Sources */,
+				1A2B3C4D5E6F788C /* AppDelegate.swift in Sources */,
+				1A2B3C4D5E6F788E /* SceneDelegate.swift in Sources */,
+				1A2B3C4D5E6F7890 /* ViewController.swift in Sources */,
+				A11111111111111111111111 /* VideoPlayerViewController.swift in Sources */,
 				A11111111111111111111113 /* AVPlayerView.swift in Sources */,
 				A11111111111111111111115 /* VideoControlsView.swift in Sources */,
 				A11111111111111111111117 /* SubtitleOverlayView.swift in Sources */,
 				A11111111111111111111119 /* LanguageSelectionViewController.swift in Sources */,
 				A1111111111111111111111B /* SettingsViewController.swift in Sources */,
-				A11111111111111111111121 /* LoginViewController.swift in Sources */,
-				A11111111111111111111123 /* SignupViewController.swift in Sources */,
 				A1111111111111111111111D /* SessionGateViewController.swift in Sources */,
 				A1111111111111111111111F /* AdminDashboardViewController.swift in Sources */,
-				A11111111111111111111111 /* VideoPlayerViewController.swift in Sources */,
-				1A2B3C4D5E6F7894 /* ViewController.swift in Sources */,
-				1A2B3C4D5E6F7892 /* SceneDelegate.swift in Sources */,
-				1A2B3C4D5E6F7890 /* AppDelegate.swift in Sources */,
+				A11111111111111111111121 /* LoginViewController.swift in Sources */,
+				A11111111111111111111123 /* SignupViewController.swift in Sources */,
+				A11111111111111111111125 /* Subtitle.swift in Sources */,
+				A11111111111111111111127 /* Language.swift in Sources */,
+				A11111111111111111111129 /* AppUser.swift in Sources */,
+				A1111111111111111111112B /* TranscriptionService.swift in Sources */,
+				A1111111111111111111112D /* TranslationService.swift in Sources */,
+				A1111111111111111111112F /* SubtitleManager.swift in Sources */,
+				A11111111111111111111131 /* AppContainer.swift in Sources */,
+				A11111111111111111111133 /* AuthProviding.swift in Sources */,
+				A11111111111111111111135 /* MockAuthProvider.swift in Sources */,
+				A11111111111111111111137 /* AnalyticsModels.swift in Sources */,
+				A11111111111111111111139 /* AnalyticsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		1A2B3C4D5E6F7897 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A2B3C4D5E6F7898 /* Main.storyboard */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1A2B3C4D5E6F789B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A2B3C4D5E6F789C /* LaunchScreen.storyboard */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		1A2B3C4D5E6F789E /* Debug */ = {
+		1A2B3C4D5E6F789A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -313,7 +294,7 @@
 			};
 			name = Debug;
 		};
-		1A2B3C4D5E6F789F /* Release */ = {
+		1A2B3C4D5E6F789B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -369,7 +350,7 @@
 			};
 			name = Release;
 		};
-		1A2B3C4D5E6F78A1 /* Debug */ = {
+		1A2B3C4D5E6F789C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -399,7 +380,7 @@
 			};
 			name = Debug;
 		};
-		1A2B3C4D5E6F78A2 /* Release */ = {
+		1A2B3C4D5E6F789D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -432,25 +413,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A2B3C4D5E6F7889 /* Build configuration list for PBXProject "VideoTranslator" */ = {
+		1A2B3C4D5E6F7885 /* Build configuration list for PBXProject "VideoTranslator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A2B3C4D5E6F789E /* Debug */,
-				1A2B3C4D5E6F789F /* Release */,
+				1A2B3C4D5E6F789A /* Debug */,
+				1A2B3C4D5E6F789B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A2B3C4D5E6F78A0 /* Build configuration list for PBXNativeTarget "VideoTranslator" */ = {
+		1A2B3C4D5E6F789C /* Build configuration list for PBXNativeTarget "VideoTranslator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A2B3C4D5E6F78A1 /* Debug */,
-				1A2B3C4D5E6F78A2 /* Release */,
+				1A2B3C4D5E6F789C /* Debug */,
+				1A2B3C4D5E6F789D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1A2B3C4D5E6F7886 /* Project object */;
+	rootObject = 1A2B3C4D5E6F7882 /* Project object */;
 }
