@@ -58,26 +58,26 @@
 		A1111111111111111111111C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsViewController.swift; sourceTree = "<group>"; };
 		A1111111111111111111111E /* SessionGateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SessionGateViewController.swift; sourceTree = "<group>"; };
 		A11111111111111111111120 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardViewController.swift; sourceTree = "<group>"; };
-		A11111111111111111111122 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth/LoginViewController.swift; sourceTree = "<group>"; };
-		A11111111111111111111124 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth/SignupViewController.swift; sourceTree = "<group>"; };
+		A11111111111111111111122 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/LoginViewController.swift; sourceTree = "<group>"; };
+		A11111111111111111111124 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Auth/SignupViewController.swift; sourceTree = "<group>"; };
 		A11111111111111111111126 /* Subtitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Subtitle.swift; sourceTree = "<group>"; };
 		A11111111111111111111128 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Language.swift; sourceTree = "<group>"; };
 		A1111111111111111111112A /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/AppUser.swift; sourceTree = "<group>"; };
 		A1111111111111111111112C /* TranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/TranscriptionService.swift; sourceTree = "<group>"; };
 		A1111111111111111111112E /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/TranslationService.swift; sourceTree = "<group>"; };
 		A11111111111111111111130 /* SubtitleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/SubtitleManager.swift; sourceTree = "<group>"; };
-		A11111111111111111111132 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
-		A11111111111111111111134 /* AuthProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProviding.swift; sourceTree = "<group>"; };
-		A11111111111111111111136 /* MockAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/MockAuthProvider.swift; sourceTree = "<group>"; };
-		A11111111111111111111138 /* AnalyticsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AnalyticsModels.swift; sourceTree = "<group>"; };
-		A1111111111111111111113A /* AnalyticsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AnalyticsStore.swift; sourceTree = "<group>"; };
-		B11111111111111111111112 /* SupabaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/SupabaseAuthProvider.swift; sourceTree = "<group>"; };
+		A11111111111111111111132 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AppContainer.swift; sourceTree = "<group>"; };
+		A11111111111111111111134 /* AuthProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/AuthProviding.swift; sourceTree = "<group>"; };
+		A11111111111111111111136 /* MockAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/MockAuthProvider.swift; sourceTree = "<group>"; };
+		A11111111111111111111138 /* AnalyticsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Analytics/AnalyticsModels.swift; sourceTree = "<group>"; };
+		A1111111111111111111113A /* AnalyticsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Analytics/AnalyticsStore.swift; sourceTree = "<group>"; };
+		B11111111111111111111112 /* SupabaseAuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/SupabaseAuthProvider.swift; sourceTree = "<group>"; };
 		B11111111111111111111114 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/SupabaseService.swift; sourceTree = "<group>"; };
 		1A2B3C4D5E6F78B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C11111111111111111111112 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin/AdminDashboardViewController.swift; sourceTree = "<group>"; };
-		C11111111111111111111114 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin/UserDetailViewController.swift; sourceTree = "<group>"; };
-		C11111111111111111111116 /* ChartViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin/ChartViews.swift; sourceTree = "<group>"; };
-		C11111111111111111111118 /* AdminRoleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin/AdminRoleManager.swift; sourceTree = "<group>"; };
+		C11111111111111111111112 /* AdminDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Admin/AdminDashboardViewController.swift; sourceTree = "<group>"; };
+		C11111111111111111111114 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Admin/UserDetailViewController.swift; sourceTree = "<group>"; };
+		C11111111111111111111116 /* ChartViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/Admin/ChartViews.swift; sourceTree = "<group>"; };
+		C11111111111111111111118 /* AdminRoleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/Auth/AdminRoleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
