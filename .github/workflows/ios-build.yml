@@ -18,20 +18,18 @@ jobs:
         with:
           xcode-version: latest-stable
 
-      - name: Build for Simulator
+      - name: Build for iOS Simulator
         run: |
-          xcodebuild \
-            -project VideoTranslator/VideoTranslator.xcodeproj \
+          xcodebuild -project VideoTranslator/VideoTranslator.xcodeproj \
             -scheme VideoTranslator \
             -configuration Debug \
             -sdk iphonesimulator \
-            -destination 'platform=iOS Simulator,name=iPhone 14' \
+            -destination "platform=iOS Simulator,name=iPhone 16" \
             build
 
       - name: Build IPA for Appetize
         run: |
-          xcodebuild \
-            -project VideoTranslator/VideoTranslator.xcodeproj \
+          xcodebuild -project VideoTranslator/VideoTranslator.xcodeproj \
             -scheme VideoTranslator \
             -configuration Debug \
             -sdk iphoneos \

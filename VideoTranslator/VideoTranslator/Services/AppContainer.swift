@@ -22,6 +22,7 @@ final class AppContainer {
     let mediaProcessor: MediaProcessor
     let screenTranslationService: ScreenTranslationService
     let liveTranslationService: LiveTranslationService
+    let languageLearningEngine: LanguageLearningEngine
     
     // MARK: - Configuration
     private let configuration: AppConfiguration
@@ -76,6 +77,14 @@ final class AppContainer {
             aiService: aiService,
             transcriptionService: transcriptionService,
             translationService: translationService
+        )
+        
+        // Initialize advanced learning engine
+        self.languageLearningEngine = LanguageLearningEngine(
+            aiService: aiService,
+            networkManager: networkManager,
+            cacheManager: cacheManager,
+            analytics: analytics
         )
         
         // Setup dependencies
